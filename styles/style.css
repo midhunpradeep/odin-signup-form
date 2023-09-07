@@ -118,12 +118,17 @@ body {
 }
 
 .signup-form > div > div > label,
-.signup-form .required-hint {
+.signup-form .required-hint,
+.signup-form .password-hint {
   text-transform: uppercase;
   font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.05em;
   color: var(--color-3);
+}
+
+.signup-form .password-hint {
+  color: var(--color-8);
 }
 
 .signup-form input {
@@ -139,7 +144,8 @@ body {
   box-shadow: 0.1rem 0.1rem 0.3rem var(--color-6);
 }
 
-.signup-form input.interacted:invalid {
+.signup-form input.interacted:invalid,
+.signup-form input.different-passwords {
   outline-color: var(--color-8);
 }
 
