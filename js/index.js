@@ -21,7 +21,7 @@ function addAsteriskToRequiredFieldLabels() {
       label.textContent += "*";
     }
   }
-  document.getElementById("required-hint").removeAttribute("hidden");
+  document.getElementById("required-hint").classList.remove("hidden");
 }
 
 function checkPasswordsMatch() {
@@ -45,12 +45,12 @@ function checkPasswordsMatch() {
       if (passwordFields[0].value === passwordFields[1].value) {
         for (const field of passwordFields) {
           field.classList.remove("different-passwords");
-          differentPasswordsHint.hidden = true;
+          differentPasswordsHint.classList.add("hidden");
         }
       } else {
         for (const field of passwordFields) {
           field.classList.add("different-passwords");
-          differentPasswordsHint.hidden = false;
+          differentPasswordsHint.classList.remove("hidden");
         }
       }
     });
