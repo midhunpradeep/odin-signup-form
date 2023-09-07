@@ -14,8 +14,19 @@ function addInteractedClassToInputs() {
   });
 }
 
+function addAsteriskToRequiredFieldLabels() {
+  const labels = document.querySelectorAll("form label");
+  for (const label of labels) {
+    if (document.getElementById(label.htmlFor).required) {
+      label.textContent += "*";
+    }
+  }
+  document.getElementById("required-hint").removeAttribute("hidden");
+}
+
 function main() {
   addInteractedClassToInputs();
+  addAsteriskToRequiredFieldLabels();
 }
 
 main();
