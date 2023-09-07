@@ -1,10 +1,12 @@
 :root {
+  /* This is a bit of a mess isn't it :/ */
   --color-1: #f9fafc;
   --color-2: #ffffff;
   --color-3: #363636;
   --color-4: #e5e7eb;
   --color-5: #596d48;
   --color-6: #00000087;
+  --color-7: #3b1f9a;
 }
 
 @font-face {
@@ -122,11 +124,16 @@ body {
   color: var(--color-3);
 }
 
-.signup-form > div > div > input {
+.signup-form input {
   font-size: 1rem;
   min-width: 30ch;
   border: 1px solid var(--color-4);
   border-radius: 0.33rem;
+}
+
+.signup-form input:focus {
+  outline: 1px solid var(--color-7);
+  box-shadow: 0.1rem 0.1rem 0.3rem var(--color-6);
 }
 
 .signup-submit-btn {
