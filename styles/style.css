@@ -7,6 +7,7 @@
   --color-5: #596d48;
   --color-6: #00000087;
   --color-7: #3b1f9a;
+  --color-8: #de2a2a;
 }
 
 @font-face {
@@ -127,13 +128,18 @@ body {
 .signup-form input {
   font-size: 1rem;
   min-width: 30ch;
-  border: 1px solid var(--color-4);
+  outline: 1px solid var(--color-4);
+  border: none;
   border-radius: 0.33rem;
 }
 
 .signup-form input:focus {
   outline: 1px solid var(--color-7);
   box-shadow: 0.1rem 0.1rem 0.3rem var(--color-6);
+}
+
+.signup-form input.interacted:invalid {
+  outline-color: var(--color-8);
 }
 
 .signup-submit-btn {
