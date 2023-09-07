@@ -180,3 +180,13 @@ body {
 .hidden {
   visibility: hidden;
 }
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .logo-container {
+    margin: 4rem 0;
+  }
+}
